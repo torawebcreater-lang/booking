@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>個別相談のご予約</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; color: #211a1a; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", Meiryo, sans-serif; }
+  .wrap { max-width: 800px; margin: 0 auto; }
+  #line_return { display: none; text-align: center; padding: 24px 16px; margin: 16px 16px; background: #f3fbf6; border-radius: 12px; }
+  #line_return .lead { font-size: 17px; font-weight: bold; margin: 0 0 8px; }
+  #line_return .note { font-size: 14px; margin: 0 0 16px; line-height: 1.7; }
+  #line_return a { display: inline-block; background: #06C755; color: #ffffff; font-size: 16px; font-weight: bold; padding: 14px 40px; border-radius: 999px; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div id="line_return">
+    <p class="lead">ご予約ありがとうございます</p>
+    <p class="note">LINEに戻ります。<br>画面が切り替わらないときは、下のボタンを押してください。</p>
+    <a href="https://liff.line.me/2009158409-IMQEp6b3/landing?follow=%40833qlztc&amp;lp=zrYV1K&amp;liff_id=2009158409-IMQEp6b3" target="_top">LINEに戻る</a>
+  </div>
+  <div id="timerex_calendar" data-url="https://timerex.net/s/biztalent/9defbd7a"></div>
+</div>
+<script>
+(function () {
+  var LINE_URL = "https://liff.line.me/2009158409-IMQEp6b3/landing?follow=%40833qlztc&lp=zrYV1K&liff_id=2009158409-IMQEp6b3";
+  function backToLine() {
+    var box = document.getElementById("line_return");
+    if (box) {
+      box.style.display = "block";
+      box.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+    setTimeout(function () {
+      try { window.top.location.href = LINE_URL; } catch (e) { window.location.href = LINE_URL; }
+    }, 2000);
+  }
+  function start() { window.TimerexCalendar({ onBookingComplete: backToLine }); }
+  if (window.TimerexCalendar) { start(); return; }
+  var s = document.createElement("script");
+  s.id = "timerex_embed";
+  s.src = "https://asset.timerex.net/js/embed.js";
+  s.onload = start;
+  document.body.appendChild(s);
+})();
+</script>
+</body>
+</html>
